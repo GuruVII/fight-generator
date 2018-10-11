@@ -23,24 +23,24 @@ const attacks = [
   },
   {
     name: 'kick',
-    chance: 25,
+    chance: 40,
     damage: 6,
     stun: true
   },
   {
     name: 'smack',
     chance: 69,
-    damage: 3,
+    damage: 2,
     stun: true
   },
   {
     name: 'punch',
-    chance: 20,
+    chance: 55,
     damage: 8
   },
   {
     name: 'bite',
-    chance: 10,
+    chance: 35,
     damage: 10
   }
 ]
@@ -48,7 +48,7 @@ const attacks = [
 function fight() {
   let bothAlive = true
   let attack1, attack2, attack1Succeds, attack2succeds, first
-  let round = 1;
+
   console.log("WELCOME TO THE ARENA!!!")
   console.log("IN ONE CORNER WE HAVE ... " + getFighterName(fighters[0]))
   console.log("IN THE OTHER CORNER ... " + getFighterName(fighters[1]))
@@ -105,10 +105,6 @@ function fight() {
       bothAlive = false;
       break;
     }
-
-    /*console.log("\nBOTH FIGHTERS ARE STILL BREATHING! " + getFighterName(fighters[0]) + " has " + fighters[0].HP + " hitpoints left and " + getFighterName(fighters[1]) + " has " + fighters[1].HP + " hitpoints remaining. ROUND " + round + ", GO! \n")*/
-
-    round++
   }
 
   const winner = (fighters[0].HP > 0) ? fighters[0] : fighters[1];
