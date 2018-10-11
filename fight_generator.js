@@ -2,14 +2,14 @@
 
 const fighters = [{
   icon: '🥊👺🥊',
-  name: 'Rudolf Pestnik',
-  special: 'Burja Pesti',
+  name: 'Rudoph Fister',
+  special: 'Fist hurricane',
   HP: 30,
   isStunned: false
 }, {
   icon: '💪🐴💪',
-  name: 'Konjec Tebe',
-  special: '50cm pogube v pak',
+  name: 'Your Horset Nightmare',
+  special: '50 cm long devastation',
   HP: 30,
   isStunned: false
 }]
@@ -113,7 +113,7 @@ function fight() {
 
   const winner = (fighters[0].HP > 0) ? fighters[0] : fighters[1];
   loser = (fighters[0].HP > 0) ? fighters[1] : fighters[0];
-  console.log(getFighterName(winner) + "HAS WON THE BATTLE!! \nWe sure won't miss " + getFighterName(loser) + ".");
+  console.log(getFighterName(winner) + " HAS WON THE BATTLE!! \nWe sure won't miss " + getFighterName(loser) + ".");
 }
 
 function battleLog(fighter, stunned, attack, success) {
